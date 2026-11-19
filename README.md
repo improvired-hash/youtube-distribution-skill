@@ -4,7 +4,7 @@ Most YouTube advice is written for creators chasing AdSense. This skill is for *
 
 It turns Claude into an operator who has scaled YouTube channels in India. It gives you research-backed options instead of generic tips, scores your Shorts before you post, packages podcast episodes, audits channels with honest numbers, and calls out vendors that inflate views.
 
-> Built by **Naveen Anant**, who has scaled StudyIQ (12.9M → 20.1M subs) and taken 6+ channels past 100K. This is my working knowledge of all my 7 years on YouTube and marketing. 
+> Built by **Naveen Anant**, who has scaled StudyIQ (12.9M → 20.1M subs) and taken 6+ channels past 100K. This is my working knowledge of 7 years on YouTube and marketing. 
 
 ## What makes it different
 

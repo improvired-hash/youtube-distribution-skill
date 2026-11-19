@@ -1,0 +1,10 @@
+{
+  "name": "youtube-distribution",
+  "version": "1.0.0",
+  "description": "YouTube operator skill for founders and brands: packaging, Shorts, channel audits, distribution and attribution, India-first.",
+  "author": { "name": "Naveen Anant", "url": "https://github.com/improvired-hash" },
+  "homepage": "https://github.com/improvired-hash/youtube-distribution-skill",
+  "repository": "https://github.com/improvired-hash/youtube-distribution-skill",
+  "license": "MIT",
+  "keywords": ["youtube", "founders", "brands", "shorts", "distribution"]
+}

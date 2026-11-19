@@ -1,8 +1,8 @@
-# YouTube Distribution: a Claude skill for founders and brands
+# YouTube Distribution: a skill for founders and brands (Claude + ChatGPT)
 
 Most YouTube advice is written for creators chasing AdSense. This skill is for **founders and brands** whose channels have to build trust, leads and sales.
 
-It turns Claude into an operator who has scaled YouTube channels in India. It gives you research-backed options instead of generic tips, scores your Shorts before you post, packages podcast episodes, audits channels with honest numbers, and calls out vendors that inflate views.
+It turns Claude or ChatGPT into an operator who has scaled YouTube channels in India. It gives you research-backed options instead of generic tips, scores your Shorts before you post, packages podcast episodes, audits channels with honest numbers, and calls out vendors that inflate views.
 
 > Built by **Naveen Anant**, who has scaled StudyIQ (12.9M → 20.1M subs) and taken 6+ channels past 100K. This is my working knowledge of 7 years on YouTube and marketing. 
 
@@ -29,13 +29,24 @@ How do I prove YouTube is bringing us leads?
 
 ## Install
 
-**Claude Code**
+The same skill works in Claude and ChatGPT. It follows the open Agent Skills format.
+
+**Claude Code** (one command, as a plugin)
+```
+/plugin marketplace add improvired-hash/youtube-distribution-skill
+/plugin install youtube-distribution@youtube-distribution
+```
+Or copy the skill in manually:
 ```bash
 git clone https://github.com/improvired-hash/youtube-distribution-skill.git
-cp -r youtube-distribution-skill/youtube-distribution ~/.claude/skills/
+cp -r youtube-distribution-skill/skills/youtube-distribution ~/.claude/skills/
 ```
 
-**Claude.ai (web and desktop):** zip the `youtube-distribution` folder and upload it in **Settings → Capabilities → Skills**.
+**Claude.ai (web and desktop):** download `youtube-distribution-skill.zip` from [Releases](https://github.com/improvired-hash/youtube-distribution-skill/releases) and upload it in **Settings → Capabilities → Skills**.
+
+**ChatGPT:** download `youtube-distribution-skill.zip` from [Releases](https://github.com/improvired-hash/youtube-distribution-skill/releases). In the sidebar, open **Plugins → Skills → Create → Upload from your computer**. Skills uploads are available on eligible Business, Enterprise and Edu plans. The plugin package (`youtube-distribution-plugin.zip`) is also on Releases for workspace admins.
+
+**Codex:** clone the repo and add it to a local plugin marketplace (see OpenAI's [plugin packaging guide](https://developers.openai.com/plugins/build/plugins)).
 
 ## Optional: real channel data (free)
 
@@ -43,16 +54,18 @@ The skill works without any setup and falls back to web search. With a free YouT
 
 1. In Google Cloud Console, create a project, enable **YouTube Data API v3**, then go to Credentials and create an API key.
 2. `export YOUTUBE_API_KEY=your-key`
-3. Try it: `python3 youtube-distribution/scripts/yt_snapshot.py @groww @zerodhaonline`
+3. Try it: `python3 skills/youtube-distribution/scripts/yt_snapshot.py @groww @zerodhaonline`
 
-That costs about 3 quota units per channel, against a free limit of 10,000 a day. The script needs only Python 3.9+, with nothing to install.
+That costs about 3 quota units per channel, against a free limit of 10,000 a day. The script needs only Python 3.9+, with nothing to install. In ChatGPT and Claude.ai, where the sandbox may not reach the internet, the skill asks you for numbers or uses web search instead.
 
 **vidIQ users:** if the vidIQ MCP is connected, the skill uses it for title scoring, outlier research and thumbnail scoring (`references/vidiq-playbook.md`).
 
 ## What's inside
 
 ```
-youtube-distribution/
+plugin.json                 ChatGPT / Agent Plugins manifest
+.claude-plugin/             Claude Code plugin + marketplace manifest
+skills/youtube-distribution/
   SKILL.md                  operating rules, context gate, router
   workflows/
     strategy.md             scoreboard, IP over uploads, cadence, podcast yes or no

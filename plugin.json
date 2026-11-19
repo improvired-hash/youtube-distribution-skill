@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "youtube-distribution",
+  "version": "1.0.0",
+  "description": "YouTube operator skill for founders and brands: packaging, Shorts, channel audits, distribution and attribution, India-first.",
+  "author": {
+    "name": "Naveen Anant",
+    "url": "https://github.com/improvired-hash"
+  },
+  "homepage": "https://github.com/improvired-hash/youtube-distribution-skill",
+  "repository": "https://github.com/improvired-hash/youtube-distribution-skill",
+  "license": "MIT",
+  "keywords": ["youtube", "founders", "brands", "shorts", "thumbnails", "distribution", "attribution", "india"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "YouTube Distribution",
+        "shortDescription": "YouTube strategy for founders and brands, built on real numbers",
+        "longDescription": "Turns ChatGPT into a YouTube operator for founders and brands whose channels must build trust, leads and sales. Packages titles and thumbnails with the 4Cs, scores Shorts with a Pre-Upload Gate, packages podcast episodes, audits channels with honest baselines that exclude likely-paid views, checks clipping and fan-page vendors for inflated numbers, and sets up YouTube attribution. India-first: English, Hinglish or regional by audience tier.",
+        "developerName": "Naveen Anant",
+        "category": "Productivity",
+        "capabilities": ["Read"],
+        "websiteURL": "https://github.com/improvired-hash/youtube-distribution-skill",
+        "defaultPrompt": [
+          "Audit @groww. What should they do next week?",
+          "Should I post this Short? Founder clip: 'We spent ₹40 lakh on influencers and got 11 orders.'",
+          "We're a 20-person SaaS selling to CFOs in India. Should we start a podcast?"
+        ]
+      }
+    }
+  }
+}

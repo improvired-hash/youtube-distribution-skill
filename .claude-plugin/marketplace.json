@@ -1,0 +1,11 @@
+{
+  "name": "youtube-distribution",
+  "owner": { "name": "Naveen Anant" },
+  "plugins": [
+    {
+      "name": "youtube-distribution",
+      "source": "./",
+      "description": "YouTube operator skill for founders and brands: packaging, Shorts, audits, distribution and attribution, India-first."
+    }
+  ]
+}
